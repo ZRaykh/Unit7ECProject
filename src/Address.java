@@ -26,6 +26,7 @@ public class Address {
         zipCode = a.getZipCode();
     }
 
+    //Format must be address format ie: Number Street Apt Number (optional), City, State Zip
     public Address(String address)
     {
         zipCode = address.substring(0, address.indexOf(" "));

@@ -15,6 +15,8 @@ public class PostageCalculator {
         {
             cost += 0.1;
         }
+        cost = (int) (cost * 100);
+        cost = cost/100;
         return cost;
     }
 
@@ -34,6 +36,8 @@ public class PostageCalculator {
         {
             cost += 0.1;
         }
+        cost = (int) (cost * 100);
+        cost = cost/100;
         return cost;
     }
 
@@ -59,6 +63,8 @@ public class PostageCalculator {
         {
             cost += 0.1;
         }
+        cost = (int) (cost * 100);
+        cost = cost/100;
         return cost;
     }
 }

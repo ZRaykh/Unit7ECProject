@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.util.Scanner;
 public class PostageCalculatorRunner {
     public static void main(String[] args) {
@@ -5,6 +6,7 @@ public class PostageCalculatorRunner {
         int choice = 0;
         while (choice != 4)
         {
+            PackageSimulator ps = new PackageSimulator();
             System.out.println("What would you like to do?");
             System.out.println("1. Calculate cost of one package");
             System.out.println("2. Simulate packages");
@@ -44,7 +46,11 @@ public class PostageCalculatorRunner {
             }
             if (choice == 2)
             {
-
+                System.out.println("How many packages would you like to simulate?");
+                String c = s.nextLine();
+                ps.generatePackages(Integer.parseInt(c));
+                System.out.println(ps.getSimulationInfo());
+                ps.resetSimulation();
             }
 
             if (choice == 3)
